@@ -20,6 +20,9 @@
 # production
 /build
 
+# auth
+/src/app/(auth)/*
+
 # misc
 .DS_Store
 *.pem
