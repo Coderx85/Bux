@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
 @layer base {
   * {
     @apply scroll-smooth;
@@ -35,6 +36,13 @@
   .recharts-responsive-container {
     height: initial !important;
   }
+=======
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+>>>>>>> auth
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
@@ -90,6 +98,7 @@
   }
 }
 
+<<<<<<< HEAD
 @layer utilities {
   /* ===== TYPOGRAPHY */
   .h1 {
@@ -452,6 +461,8 @@
   }
 }
 
+=======
+>>>>>>> auth
 @layer base {
   * {
     @apply border-border;
