@@ -6,11 +6,7 @@
   "tailwind": {
     "config": "tailwind.config.ts",
     "css": "src/app/globals.css",
-<<<<<<< HEAD
     "baseColor": "zinc",
-=======
-    "baseColor": "neutral",
->>>>>>> auth
     "cssVariables": true,
     "prefix": ""
   },

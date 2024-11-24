@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -234,11 +233,3 @@ export const getFileTypesParams = (type: string) => {
       return ["document"];
   }
 };
-=======
-import { clsx, type ClassValue } from "clsx"
-import { twMerge } from "tailwind-merge"
-
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs))
-}
->>>>>>> auth

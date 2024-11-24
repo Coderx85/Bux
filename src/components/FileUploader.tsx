@@ -1,12 +1,10 @@
 "use client";
 
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 
 import { Button } from "@/components/ui/button";
-import { cn, convertFileToUrl, getFileType } from "@/lib/utils";
+import { cn, getFileType } from "@/lib/utils";
 import Image from "next/image";
-import { useToast } from "@/hooks/use-toast";
-import { usePathname } from "next/navigation";
 
 interface Props {
   ownerId: string;
@@ -15,8 +13,6 @@ interface Props {
 }
 
 const FileUploader = ({ ownerId, accountId, className }: Props) => {
-  const path = usePathname();
-  const { toast } = useToast();
   const [files, setFiles] = useState<File[]>([]);
 
   const handleRemoveFile = (
@@ -52,11 +48,6 @@ const FileUploader = ({ ownerId, accountId, className }: Props) => {
                 className="uploader-preview-item"
               >
                 <div className="flex items-center gap-3">
-                  {/* <Thumbnail
-                    type={type}
-                    extension={extension}
-                    url={convertFileToUrl(file)}
-                  /> */}
 
                   <div className="preview-item-name">
                     {file.name}

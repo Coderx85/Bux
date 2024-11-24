@@ -23,7 +23,14 @@ interface Props {
   email: string;
 }
 
-const MobileNavigation = () => {
+const MobileNavigation = ({
+  $id: ownerId,
+  accountId,
+  fullName,
+  avatar,
+  email,
+}:Props
+) => {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
@@ -50,15 +57,15 @@ const MobileNavigation = () => {
           <SheetTitle>
             <div className="header-user">
               <Image
-                src="/assets/icons/avatar.svg"
+                src={avatar}
                 alt="avatar"
                 width={44}
                 height={44}
                 className="header-user-avatar"
               />
               <div className="sm:hidden lg:block">
-                <p className="subtitle-2 capitalize">Name</p>
-                <p className="caption">Email</p>
+                <p className="subtitle-2 capitalize">{fullName}</p>
+                <p className="caption">{email}</p>
               </div>
             </div>
             {/* <Separator className="mb-4 bg-light-200/20" /> */}
@@ -94,7 +101,7 @@ const MobileNavigation = () => {
           {/* <Separator className="my-5 bg-light-200/20" /> */}
 
           <div className="flex flex-col justify-between gap-5 pb-5">
-            {/* <FileUploader ownerId={ownerId} accountId={accountId} /> */}
+            <FileUploader ownerId={ownerId} accountId={accountId} />
             <Button
               type="submit"
               className="mobile-sign-out-button"
