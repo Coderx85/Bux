@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@hookform/resolvers": "^3.9.1",
     "@radix-ui/react-alert-dialog": "^1.1.2",
     "@radix-ui/react-dialog": "^1.1.2",
@@ -32,7 +33,17 @@
   "overrides": {
     "react": "$react",
     "react-dom": "$react-dom"
+=======
+    "react": "19.0.0-rc-02c0e824-20241028",
+    "react-dom": "19.0.0-rc-02c0e824-20241028",
+    "next": "15.0.2"
+>>>>>>> my
   },
+  "overrides": {
+    "react": "$react",
+    "react-dom": "$react-dom"
+  },
+  "@types/node": "^20",
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
