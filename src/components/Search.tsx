@@ -4,9 +4,12 @@ import React, { useEffect, useState } from "react";
 
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { getFiles } from "@/lib/actions/file.actions";
 import { Models } from "node-appwrite";
 import Thumbnail from "@/components/Thumbnail";
+import FormattedDateTime from "@/components/FormattedDateTime";
+import { useDebounce } from "use-debounce";
 const Search = () => {
   const [query, setQuery] = useState("");
   const searchParams = useSearchParams();
@@ -14,6 +17,24 @@ const Search = () => {
   const [results, setResults] = useState<Models.Document[]>([]);
   const [open, setOpen] = useState(false);
   const router = useRouter();
+  const path = usePathname();
+  const [debouncedQuery] = useDebounce(query, 300);
+
+  useEffect(() => {
+    const fetchFiles = async () => {
+      if (debouncedQuery.length === 0) {
+        setResults([]);
+        setOpen(false);
+        return router.push(path.replace(searchParams.toString(), ""));
+      }
+
+      const files = await getFiles({ types: [], searchText: debouncedQuery });
+      setResults(files.documents);
+      setOpen(true);
+    };
+
+    fetchFiles();
+  }, [debouncedQuery]);
 
   useEffect(() => {
     if (!searchQuery) {
@@ -66,7 +87,11 @@ const Search = () => {
                       {file.name}
                     </p>
                   </div>
-                  
+
+                  <FormattedDateTime
+                    date={file.$createdAt}
+                    className="caption line-clamp-1 text-light-200"
+                  />
                 </li>
               ))
             ) : (
