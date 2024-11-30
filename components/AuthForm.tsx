@@ -140,18 +140,27 @@ const AuthForm = ({ type }: { type: FormType }) => {
 
           {errorMessage && <p className="error-message">*{errorMessage}</p>}
 
-          <div className="body-2 flex justify-center">
+          <div className="flex body-2 text-left">
             <p className="text-light-100">
               {type === "sign-in"
                 ? "Don't have an account?"
                 : "Already have an account?"}
+              <Link
+                href={type === "sign-in" ? "/sign-up" : "/sign-in"}
+                className="ml-1 font-medium text-brand hover:underline hover:duration-150 hover:text-brand-100"
+              >
+                {" "}
+                {type === "sign-in" ? "Sign Up" : "Sign In"}
+              </Link>
             </p>
-            <Link
-              href={type === "sign-in" ? "/sign-up" : "/sign-in"}
-              className="ml-1 font-medium text-brand"
-            >
+          </div>
+          <div className="flex body-2 text-left">
+            <p className="text-light-100">
+              For any queries or support, please 
+            </p>
+            <Link href="/contact-us" className="ml-1 font-medium text-brand hover:underline hover:duration-150 hover:text-brand-100">
               {" "}
-              {type === "sign-in" ? "Sign Up" : "Sign In"}
+              Contact Us
             </Link>
           </div>
         </form>
