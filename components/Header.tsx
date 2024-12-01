@@ -4,6 +4,8 @@ import Image from "next/image";
 import Search from "@/components/Search";
 import FileUploader from "@/components/FileUploader";
 import { signOutUser } from "@/lib/actions/user.actions";
+import { FaQuestionCircle } from "react-icons/fa";
+import Link from "next/link";
 
 const Header = ({
   userId,
@@ -24,15 +26,31 @@ const Header = ({
             await signOutUser();
           }}
         >
-          <Button type="submit" className="sign-out-button">
-            <Image
-              src="/assets/icons/logout.svg"
-              alt="logo"
-              width={24}
-              height={24}
-              className="w-6"
-            />
-          </Button>
+          <div className="flex gap-2">
+            <Button type="submit" className="sign-out-button">
+              <Image
+                src="/assets/icons/logout.svg"
+                alt="logo"
+                width={24}
+                height={24}
+                className="w-6"
+              />
+            </Button>
+
+            <Link href="/contact" className="query-button">
+              {/* <Image 
+                src="/assets/icons/query.svg"
+                alt="logo"
+                width={24}
+                height={24}
+                className="w-6"
+              /> */}
+              <FaQuestionCircle 
+                width={30}
+                height={30}
+              />
+            </Link>
+          </div>
         </form>
       </div>
     </header>
