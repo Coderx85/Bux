@@ -192,7 +192,7 @@
 
   /* Sidebar & MobileNavigation */
   .nav-icon {
-    @apply w-6 filter invert opacity-25 !important;
+    @apply w-6 opacity-75 !important;
   }
   .nav-icon-active {
     @apply invert-0 opacity-100 !important;
@@ -369,6 +369,10 @@
     @apply flex-center h-[52px] min-w-[54px] items-center rounded-full bg-brand/10 p-0 text-brand shadow-none transition-all hover:bg-brand/20 !important;
   }
 
+  .query-button {
+    @apply flex-center h-[52px] min-w-[54px] items-center rounded-full bg-brand/10 p-0 text-brand shadow-none transition-all hover:bg-brand/20 !important;
+  }
+
   /* Mobile Navigation */
   .mobile-header {
     @apply flex h-[60px] justify-between px-5 sm:hidden !important;
@@ -422,17 +426,17 @@
     @apply h5 mt-9 flex-1 gap-1 text-brand !important;
   }
   .sidebar-nav-item {
-    @apply flex text-light-100 gap-4 rounded-xl lg:w-full justify-center lg:justify-start items-center h5 lg:px-[30px] h-[52px] lg:rounded-full !important;
+    @apply flex text-white opacity-75 gap-4 rounded-sm lg:w-full justify-center lg:justify-start items-center h5 lg:px-[30px] h-[52px] lg:rounded-lg !important;
   }
   .sidebar-user-info {
-    @apply mt-4 flex items-center justify-center gap-2 rounded-full bg-brand/10 p-1 text-light-100 lg:justify-start lg:p-3 !important;
+    @apply mt-4 flex items-center justify-center gap-2 rounded-full bg-white/10 p-1 text-white/60 lg:justify-start lg:p-3 !important;
   }
   .sidebar-user-avatar {
-    @apply aspect-square w-10 rounded-full object-cover !important;
+    @apply aspect-square w-10 rounded-full text-white object-cover !important;
   }
 
   .shad-active {
-    @apply bg-brand text-white shadow-drop-2 !important;
+    @apply bg-brand text-white opacity-100 shadow-drop-2 animate-out !important;
   }
 
   /* Sort */

@@ -40,3 +40,5 @@ public/assets/icons
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+app/test
