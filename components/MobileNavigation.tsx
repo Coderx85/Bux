@@ -37,13 +37,16 @@ const MobileNavigation = ({
 
   return (
     <header className="mobile-header">
-      <Image
-        src="/assets/icons/logo-full-brand.svg"
-        alt="logo"
-        width={120}
-        height={52}
-        className="h-auto"
-      />
+      <div className="flex justify-start">
+        <Image
+          src="/assets/icons/logo-full-brand.svg"
+          alt="logo"
+          width={52}
+          height={52}
+          className="h-auto"
+        />
+        <h1 className="text-brand text-4xl">Bux</h1>
+      </div>
 
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger>

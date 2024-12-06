@@ -102,7 +102,7 @@ const Contact = () => {
               </Button>
             </form>
           </div>
-          <div className='flex flex-1 items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0'>
+          <div className='xl:flex flex-1 hidden items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0'>
             <ul className='flex flex-col gap-10 mr-10'>
                 {contactInfo.map((info, index) => {
                     return <li key={index} className='flex bg-dark-200 items-center gap-6'>
