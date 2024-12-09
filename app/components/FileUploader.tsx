@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/app/components/ui/button";
 import { cn, getFileType } from "@/lib/utils";
 import Image from "next/image";
 

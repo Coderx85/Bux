@@ -8,16 +8,16 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
+} from "@/app/components/ui/alert-dialog";
 
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/components/ui/input-otp";
+} from "@/app/components/ui/input-otp";
 import React, { useState } from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/app/components/ui/button";
 import { verifySecret, sendEmailOTP } from "@/lib/actions/user.actions";
 import { useRouter } from "next/navigation";
 

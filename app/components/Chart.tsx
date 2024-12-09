@@ -14,8 +14,8 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-} from "@/components/ui/card";
-import { ChartConfig, ChartContainer } from "@/components/ui/chart";
+} from "@/app/components/ui/card";
+import { ChartConfig, ChartContainer } from "@/app/components/ui/chart";
 import { calculatePercentage, convertFileSize } from "@/lib/utils";
 
 const chartConfig = {

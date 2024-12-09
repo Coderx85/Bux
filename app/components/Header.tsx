@@ -1,8 +1,8 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/app/components/ui/button";
 import Image from "next/image";
-import Search from "@/components/Search";
-import FileUploader from "@/components/FileUploader";
+import Search from "@/app/components/Search";
+import FileUploader from "@/app/components/FileUploader";
 import { signOutUser } from "@/lib/actions/user.actions";
 import { FaQuestionCircle } from "react-icons/fa";
 import Link from "next/link";

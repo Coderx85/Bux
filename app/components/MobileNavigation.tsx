@@ -5,7 +5,7 @@ import {
   SheetContent,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from "@/app/components/ui/sheet";
 import Image from "next/image";
 import React, { useState } from "react";
 import { usePathname } from "next/navigation";
@@ -13,8 +13,8 @@ import { Separator } from "@radix-ui/react-separator";
 import { navItems } from "@/constants";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-import FileUploader from "@/components/FileUploader";
+import { Button } from "@/app/components/ui/button";
+import FileUploader from "@/app/components/FileUploader";
 import { signOutUser } from "@/lib/actions/user.actions";
 
 interface Props {
